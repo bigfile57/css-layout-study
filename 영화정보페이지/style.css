@@ -5,30 +5,36 @@
 }
 
 .wrapper-main{
+    position: relative;
     max-width: 1200px;
-    background: linear-gradient(to bottom,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0.8) 60%,
-    rgba(0, 0, 0, 0.9) 90%,
-    rgba(123, 37, 37, 0.9) 100%), 
-    url(./images/cover.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100vh;
     margin: 0 auto;
-    padding: 90px 40px;
-    display: flex;
+    background-color: rgb(4, 3, 3);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    overflow: hidden;
+}
+.wrap-title{
+    position: relative;
+    max-width: 100%;
+}
+.wrap-title img{
+    display: block;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to top,
+    transparent 0%, black 10%);
+    mask-image: linear-gradient(to top, transparent 5%, black 100%);
+
 }
 .cont-content,
 .cont-side{
-    margin-top: 45%;
+    /* padding-top: 53%; */
+    padding-bottom: 30px;
     color: white;
 }
 .cont-content{
-    /* background-color: rgba(255,255,255,0.5); */
-    width: 80%;
-    padding-right: 140px;
+    float: left;
+    width: 55%;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 .cont-content h1{
     font-size: 54px;
@@ -40,11 +46,56 @@
     color: rgba(255, 254, 254, 0.8);
 }
 .cont-side{
-    background-color: rgba(255,255,255,0.5);
-    border: 3px solid blue;
-    display: flex;
+    float: right;
     flex-direction: column;
-    padding: 10px;
     box-sizing: border-box;
     width: 25%;
 }
+.cont-side section{
+    flex-basis: 33%;
+    flex-grow: 1;
+    font-size: 20px;
+    padding: 30px 0;
+}
+.cont-side .list-genre{
+    padding-top: 20px;
+    padding-right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.list-genre li{
+    margin: 1px 2px;
+}
+.list-genre li button{
+    background-color: rgba(41, 37, 37);
+    color: rgb(207, 203, 203);
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 5px;
+}
+.div-star{
+    display: flex;
+    align-items: center;
+}
+.div-star div{
+    width: 47px;
+    height: 50px;
+    margin: 20px 0;
+}
+.div-ratings .img-star{
+    background: url(./images/star.png) no-repeat 1% 100%;
+    background-size: 520% 200%;
+}
+.div-ratings .img-nostar{
+    background: url(./images/star.png) no-repeat 1% 0%;
+    background-size: 520% 200%;
+}
+
+.div-casts img{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid red;
+    border-radius: 50%;
+}
+
